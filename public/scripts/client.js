@@ -24,13 +24,13 @@ const renderTweets = function (tweets) {
   let container = $(".tweets-container");
   for (let item of tweets) {
     let callTweetElement = createTweetElement(item);
-    container.append(callTweetElement);
+    container.prepend(callTweetElement);
   }
 };
 
 $(document).ready(function () {
   let clicks = 0;
-  $("#span-button").click(function() {
+  $("#span-button").click(function () {
     if (clicks % 2 === 0) {
       $('.new-tweet').slideUp();
       clicks++;
