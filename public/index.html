@@ -27,7 +27,7 @@
   <!-- Top nav bar (fixed) -->
   <nav class="fixed-navbar">
     <span>tweeter</span>
-    <button id="span-button">White a new tweet</button>
+    <button id="span-button">Write a new tweet</button>
   </nav>
 
   <header class="top-header">
@@ -43,8 +43,10 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <p>errrorr</p>
       <form id="form" method="POST" action="/tweets/">
+        <div class="form-error" id="form-error">
+          <p id="content">errrorr</p>
+        </div>
         <textarea id="textarea"name="text" placeholder="What are you humming about?"></textarea>
         <br>
         <input id= "botton"type="submit" value="Tweet">

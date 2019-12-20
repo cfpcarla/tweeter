@@ -61,12 +61,16 @@ $(document).ready(function () {
     // Stop form from submitting normally
     event.preventDefault();
 
+
     if ($('textarea').val().length === 0) {
-      alert("Error.");
+      $('#form-error #content').text("Write somenthing.");
+      $("#form-error").slideDown();
     } else if ($('textarea').val().length > 140) {
-      alert("too long!");
+      $('#form-error #content').text("Tweet too long.");
+      $("#form-error").slideDown();
 
     } else {
+      $("#form-error").slideUp();
       // Send the data using post
       $.ajax({
         type: "POST",
