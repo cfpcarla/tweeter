@@ -1,21 +1,19 @@
-// const escape = function (str) {
-//   let div = document.createElement('div');
-//   div.appendChild(document.createTextNode(str));
-//   return div.innerHTML;
-// };
-
-
+const escape = function (str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 
 const createTweetElement = function (tweet) {
   let $tweet = $('<article>').addClass('tweet');
 
   $tweet.append(
     `<header>
-      <img class="profile" src=${tweet.user.avatars}>
-      <h5 class= "name">${tweet.user.name}</h5>
-      <h5 class="handle">${tweet.user.handle}</h5>
+      <img class="profile" src=${escape(tweet.user.avatars)}>
+      <h5 class= "name">${escape(tweet.user.name)}</h5>
+      <h5 class="handle">${escape(tweet.user.handle)}</h5>
       </header>
-      <p class= "text">${tweet.content.text} </p>
+      <p class= "text">${escape(tweet.content.text)} </p>
       <footer class="footer">
       </footer></article>`
   );

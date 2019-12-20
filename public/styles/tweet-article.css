@@ -3,8 +3,7 @@
 }
 
 .tweet {
-  height: 100px;
-  margin: 50px ;
+  margin: 50px;
   border-style: solid;
   padding-left: 25px;
 }
@@ -13,7 +12,7 @@
   box-shadow: 5px 10px;
 }
 
-.image {
+img {
   width: 5%;
   left: 2px;
 }
@@ -23,9 +22,12 @@
   font-family: "Bungee";
 
 }
-/* .handle {
+
+.handle {
   float: right;
-} */
+  color: grey;
+}
+
 .text {
   padding: 7px;
   margin: 0;
