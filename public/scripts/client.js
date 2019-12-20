@@ -1,4 +1,4 @@
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -29,8 +29,7 @@ const createTweetElement = function (tweet) {
   return $tweet.append();
 };
 
-
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   tweets.sort((a, b) => a.created_at < b.created_at);
   let container = $(".tweets-container");
   for (let item of tweets) {
@@ -39,9 +38,9 @@ const renderTweets = function (tweets) {
   }
 };
 
-$(document).ready(function () {
+$(document).ready(function() {
   let clicks = 0;
-  $("#span-button").click(function () {
+  $("#span-button").click(function() {
     if (clicks % 2 === 0) {
       $('.new-tweet').slideUp();
       clicks++;
@@ -52,7 +51,7 @@ $(document).ready(function () {
     }
   });
 
-  const loadTweets = function () {
+  const loadTweets = function() {
     //Ajax Function to send a get request
     $.ajax({
       type: "GET",
@@ -75,7 +74,6 @@ $(document).ready(function () {
     } else if ($('textarea').val().length > 140) {
       $('#form-error #content').text("Tweet too long.");
       $("#form-error").slideDown();
-
     } else {
       $("#form-error").slideUp();
       // Send the data using post
@@ -92,11 +90,3 @@ $(document).ready(function () {
     }
   });
 });
-
-
-
-
-
-
-
-

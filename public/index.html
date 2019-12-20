@@ -1,75 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Meta Information -->
-  <title>Tweeter - Home Page</title>
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i,700i&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/ffb9220129.js" crossorigin="anonymous"></script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i,700i&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ffb9220129.js" crossorigin="anonymous"></script>
 
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweet-article.css" type="text/css" />
 
-  <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/tweet-article.css" type="text/css" />
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-  <!-- External JS -->
-  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  </head>
 
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-</head>
-
-<body>
-  <!-- Top nav bar (fixed) -->
-  <nav class="fixed-navbar">
-    <span class="title">Tweeter</span>
-    <button class="write-a-new-tweet" id="span-button">Write a new tweet ︾</button>
-  </nav>
-  <header class="top-header">
-    <img class="profile" src="/images/profile-hex.png">
-    <br>
-    <h2 class= "h2">Carla</h2>
-  </header>
+  <body>
+    <!-- Top nav bar (fixed) -->
+    <nav class="fixed-navbar">
+      <span class="title">Tweeter</span>
+      <button class="write-a-new-tweet" id="span-button">Write a new tweet ︾</button>
+    </nav>
+    <header class="top-header">
+      <img class="profile" src="/images/profile-hex.png">
+      <br>
+      <h2 class= "h2">Carla</h2>
+    </header>
 
   <!-- Page-specific (main) content here -->
-  <main class="container">
-    <section class="new-tweet">
-      <form id="form" method="POST" action="/tweets/">
-        <div class="form-error" id="form-error">
-          <p id="content">errrorr</p>
-        </div>
-        <textarea id="textarea"name="text" placeholder="What are you humming about?"></textarea>
-        <br>
-        <input id= "botton"type="submit" value="Tweet">
-        <span id="counter">140</span>
-        <div id="result"></div>
-      </form>
-    </section>
-
-    <section class="tweets-container">
-      <article class="tweet">
-        <header>
-          <img class="image" src="https://i.imgur.com/73hZDYK.png">
-          <h5 class="name">name:</h5>
-          <h5 class="handle">name:</h5>
-        </header>
-        <p class= "text">If I have seen further it is by standing on the shoulders of giants
-        <footer id="footer">
-          <span class="time">Days ago</span>
-          <div>
-            <i class="fas fa-flag"></i>
-            <i class="fas fa-retweet"></i>
-            <i class="fas fa-heart"></i>
+    <main class="container">
+      <section class="new-tweet">
+        <form id="form" method="POST" action="/tweets/">
+          <div class="form-error" id="form-error">
+            <p id="content"></p>
           </div>
-        </footer>
-      </article>
-    </section>
+          <textarea id="textarea"name="text" placeholder="What are you humming about?"></textarea>
+          <br>
+          <input id= "botton"type="submit" value="Tweet">
+          <span id="counter">140</span>
+          <div id="result"></div>
+        </form>
+      </section>
+
+      <section class="tweets-container">
+        <article class="tweet">
+          <header>
+            <img class="image" src="https://i.imgur.com/73hZDYK.png">
+            <h5 class="name">name:</h5>
+            <h5 class="handle">name:</h5>
+          </header>
+
+          <p class= "text">If I have seen further it is by standing on the shoulders of giants
+          <footer id="footer">
+            <span class="time">Days ago</span>
+            <div>
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-heart"></i>
+            </div>
+          </footer>
+        </article>
+      </section>
     </main>
   </body>
-  </html>
+</html>

@@ -12,17 +12,17 @@ This repository is the starter code for the project: Students will fork and clon
 4. Go to <http://localhost:8080/> in your browser.
 
 
-###Final Project
+### Final Project
 
-### Initial Page
+## Initial Page
 
-!["Initial Page"](tweeter/views/initial-page.png)
+!["Initial Page"](https://github.com/cfpcarla/tweeter/blob/master/views/initial-page.png?raw=true)
 
 ***
 
 ### My tweets
 
-!["My tweets"](tweeter/views/my-tweets.png)
+!["My tweets"](https://github.com/cfpcarla/tweeter/blob/master/views/my-tweets.png?raw=true)
 
 ## Dependencies
 

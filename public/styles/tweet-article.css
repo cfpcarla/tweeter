@@ -18,11 +18,13 @@ img {
   width: 5%;
   left: 2px;
 }
+
 .name, .handle {
   margin: 0;
   display: inline;
   font-family: "Bungee";
 }
+
 .handle {
   float: right;
   color: grey;
@@ -35,8 +37,8 @@ img {
 }
 
 #footer {
-display:flex;
-justify-content: space-between;
-padding: 2px;
+  display:flex;
+  justify-content: space-between;
+  padding: 2px;
 }
 

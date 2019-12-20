@@ -12,5 +12,3 @@ $(document).ready(function() {
     }
   });
 });
-
-// Some common checks are that data is not empty ("", or null), and in the case of Tweeter, you can also validate the maximum message length.
