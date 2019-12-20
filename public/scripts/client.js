@@ -6,18 +6,24 @@ const escape = function (str) {
 
 const createTweetElement = function (tweet) {
   let $tweet = $('<article>').addClass('tweet');
+  let daysAgo = new Date();
+  let today = daysAgo.getTime();
+  let result = Math.round((today - tweet.created_at) / 86400000);
 
   $tweet.append(
     `<header>
       <img class="profile" src=${escape(tweet.user.avatars)}>
-      <h5 class= "name">${escape(tweet.user.name)}</h5>
-      <h5 class="handle">${escape(tweet.user.handle)}</h5>
+      <h5 class= "name">${(tweet.user.name)}</h5>
+      <h5 class="handle">${(tweet.user.handle)}</h5>
       </header>
       <p class= "text">${escape(tweet.content.text)} </p>
       <footer id="footer">
+      <span>${(result)}Days ago</span>
+      <div>
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
       <i class="fas fa-heart"></i>
+      </div>
       </footer></article>`
   );
   return $tweet.append();
@@ -32,7 +38,6 @@ const renderTweets = function (tweets) {
     container.prepend(callTweetElement);
   }
 };
-
 
 $(document).ready(function () {
   let clicks = 0;

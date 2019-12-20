@@ -4,12 +4,11 @@
 }
 
 article.tweet {
-  padding-bottom: 40px;
   position: relative;
   margin: 30px;
   border-style: solid;
-  padding-left: 25px;
   height: auto;
+  padding: 20px;
 }
 
 .tweet:hover {
@@ -36,8 +35,8 @@ img {
 }
 
 #footer {
-  right: 0px;
-  position: absolute;
-  bottom: 0px;
-  padding: 2px;
+display:flex;
+justify-content: space-between;
+padding: 2px;
 }
+
