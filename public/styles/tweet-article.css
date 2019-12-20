@@ -1,0 +1,32 @@
+.tweets-container {
+  background-color: #F5F5DC;
+}
+
+.tweet {
+  height: 100px;
+  margin: 50px ;
+  border-style: solid;
+  padding-left: 25px;
+}
+
+.tweet:hover {
+  box-shadow: 5px 10px;
+}
+
+.image {
+  width: 5%;
+  left: 2px;
+}
+.name, .handle {
+  margin: 0;
+  display: inline;
+  font-family: "Bungee";
+
+}
+/* .handle {
+  float: right;
+} */
+.text {
+  padding: 7px;
+  margin: 0;
+}

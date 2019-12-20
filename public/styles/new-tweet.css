@@ -1,0 +1,31 @@
+form #form {
+  padding: 20px;
+}
+.new-tweet {
+padding-bottom: 100px;
+}
+
+#textarea {
+  width:90%;
+  margin-left: 5%;
+  border-bottom-width: 4px;
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  background-color: #F5F5DC;
+}
+ #botton {
+  padding: 1px;
+  border-style: solid;
+  width:11%;
+  margin-left: 5%;
+}
+ #counter {
+  margin-right: 5%;
+  float: right;
+}
+#form {
+  width: 100%;
+  height: 70px;
+}
+
