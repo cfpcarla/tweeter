@@ -3,12 +3,15 @@
 //   div.appendChild(document.createTextNode(str));
 //   return div.innerHTML;
 // };
+
+
+
 const createTweetElement = function (tweet) {
   let $tweet = $('<article>').addClass('tweet');
 
   $tweet.append(
     `<header>
-      <img class= "image" src=${tweet.user.avatars}>
+      <img class="profile" src=${tweet.user.avatars}>
       <h5 class= "name">${tweet.user.name}</h5>
       <h5 class="handle">${tweet.user.handle}</h5>
       </header>
@@ -80,9 +83,9 @@ $(document).ready(function () {
           console.log('response', response);
           renderTweets([{
             user: {
-              name: 'andrew',
-              avatars: 'or something',
-              handle: 'so good!'
+              name: 'Carla',
+              avatars: 'https://i.imgur.com/73hZDYK.png',
+              handle: '@cfp_carla'
             },
             content: {
               text: $('#textarea').val()
