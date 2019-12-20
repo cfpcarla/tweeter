@@ -1,7 +1,7 @@
 .top-header {
   height: 400px;
   width: 100%;
-  background-color: #F5F5DC;
+  background-color: #4056A1;
   padding: 20px;
 }
 
@@ -10,10 +10,12 @@
   display: block;
   margin: auto;
   width: fit-content;
-  background-image: url("https://www.transparenttextures.com/patterns/ps-neutral.png");
+
   top: 1em;
 }
 
 .top-header .h2 {
   text-align: center;
+  color: white;
+  margin: auto;
 }

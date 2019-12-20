@@ -1,11 +1,15 @@
 .tweets-container {
   background-color: #F5F5DC;
+  margin-top: 100px;
 }
 
-.tweet {
-  margin: 50px;
+article.tweet {
+  padding-bottom: 40px;
+  position: relative;
+  margin: 30px;
   border-style: solid;
   padding-left: 25px;
+  height: auto;
 }
 
 .tweet:hover {
@@ -23,9 +27,17 @@ img {
 .handle {
   float: right;
   color: grey;
+  padding: 15px;
 }
 
 .text {
   padding: 7px;
   margin: 0;
+}
+
+#footer {
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+  padding: 2px;
 }

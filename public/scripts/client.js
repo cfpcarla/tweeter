@@ -14,11 +14,15 @@ const createTweetElement = function (tweet) {
       <h5 class="handle">${escape(tweet.user.handle)}</h5>
       </header>
       <p class= "text">${escape(tweet.content.text)} </p>
-      <footer class="footer">
+      <footer id="footer">
+      <i class="fas fa-flag"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="fas fa-heart"></i>
       </footer></article>`
   );
   return $tweet.append();
 };
+
 
 const renderTweets = function (tweets) {
   tweets.sort((a, b) => a.created_at < b.created_at);
@@ -28,6 +32,7 @@ const renderTweets = function (tweets) {
     container.prepend(callTweetElement);
   }
 };
+
 
 $(document).ready(function () {
   let clicks = 0;
@@ -42,7 +47,6 @@ $(document).ready(function () {
     }
   });
 
-
   const loadTweets = function () {
     //Ajax Function to send a get request
     $.ajax({
@@ -56,13 +60,10 @@ $(document).ready(function () {
   };
   loadTweets();
 
-
   // Attach a submit handler to the form
   $("#form").submit(function (event) {
     // Stop form from submitting normally
     event.preventDefault();
-
-
     if ($('textarea').val().length === 0) {
       $('#form-error #content').text("Write somenthing.");
       $("#form-error").slideDown();
@@ -79,16 +80,7 @@ $(document).ready(function () {
         data: $(this).serialize(),
         success: function (response) {
           console.log('response', response);
-          renderTweets([{
-            user: {
-              name: 'Carla',
-              avatars: 'https://i.imgur.com/73hZDYK.png',
-              handle: '@cfp_carla'
-            },
-            content: {
-              text: $('#textarea').val()
-            }
-          }]);
+          loadTweets();
           $('#textarea').val('');
         },
       });
